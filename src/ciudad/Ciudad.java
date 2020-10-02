@@ -93,13 +93,18 @@ public class Ciudad {
         //Agrega los nacimientos diarios de la ciudad al numero de ciudadanos
     public void nacimientosDiarios(){
         this.numeroDeCiudadanos += 500;
+        this.capital = true;
         }
     
         /** Cambia el alcalde de la ciudadd
         */
-    public void alcaldeCiudad (String nuevoAlcalde){
-        this.alcalde = nuevoAlcalde;
+    public void alcaldeCiudad(){
+        this.alcalde = "santiago";
         }
+    
+    public void productoGenerado(){
+        this.producto = "cafe";
+    }
         
     public static void main(String[] args) {
         Ciudad ciudadUno = new Ciudad(
@@ -111,14 +116,26 @@ public class Ciudad {
                 false,
                 "Arroz con huevo" );
         
+        System.out.println("DATOS AÑO 2019");
+        
         System.out.println(ciudadUno.getNombre());
         System.out.println(ciudadUno.getNumeroDeCiudadanos());
         System.out.println(ciudadUno.getComidaTipica());
+        System.out.println(ciudadUno.getAlcalde());
+        System.out.println(ciudadUno.getProducto());
+        
         
         ciudadUno.nacimientosDiarios();
+        ciudadUno.alcaldeCiudad();
+        
+        System.out.println("---DATOS ACTUALIZADOS PARA NUEVO AÑO---");
         
         System.out.println(ciudadUno.getNombre());
         System.out.println(ciudadUno.getNumeroDeCiudadanos());
+        System.out.println(ciudadUno.getComidaTipica());
+        System.out.println(ciudadUno.getCapital());
+        System.out.println(ciudadUno.getAlcalde());
+        System.out.println(ciudadUno.getProducto());
         
     }
 
